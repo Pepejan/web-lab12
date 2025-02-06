@@ -1,3 +1,17 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
 .header {
     background-color: #343434;
     padding: 8px;
@@ -19,9 +33,7 @@ ul.hr li {
     src: url("font/Pacifico-Regular.ttf") format("woff2");
 }
 
-
 .name {
-
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
 }
@@ -29,7 +41,6 @@ ul.hr li {
 .col-7 {
     display: flex;
     justify-content: right;
-
 }
 
 .border_images {
@@ -44,16 +55,16 @@ a {
 }
 
 .text-ex-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
     background: url(images/pelacan.jpg);
     background-size: cover;
     width: 100%;
     height: 600px;
+}
 
+.text-ex-image {
+    composes: flex-center flex-column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 @font-face {
@@ -97,6 +108,11 @@ a {
     margin: 30px;
 }
 
+.circles {
+    display: flex;
+    justify-content: center;
+}
+
 .circle {
     width: 10px;
     height: 10px;
@@ -110,21 +126,17 @@ a {
     background-color: #696969;
 }
 
-.circles {
-    display: flex;
-    justify-content: center;
-}
-
 .last {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
     background-image: url(images/phone.png);
     background-size: 100%;
     height: 330px;
     width: 50%;
+}
+
+.last {
+    composes: flex-center flex-column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .last_text {
@@ -143,15 +155,15 @@ p {
     color: #6a6a6a;
 }
 
-.green-button-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
+.green-button-container {
     height: 250px;
-
 }
+
+.green-button-container {
+    composes: flex-center flex-column;
+    justify-content: end;
+}
+
 .green-button {
     background-color: #4CAF50;
     color: white;
@@ -159,18 +171,17 @@ p {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-
 }
 
 .green-button:hover {
     background-color: #90EE90;
 }
 
-.final-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.final-container {
     width: 100%;
     height: 200px;
+}
+
+.final-container {
+    composes: flex-center flex-column;
 }
